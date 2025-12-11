@@ -18,12 +18,33 @@ const Users = () => {
 
   return (
     <div>
-      <h2>Users</h2>
-      <ul>
-        {users.map((user, idx) => (
-          <li key={user.id || idx}>{user.name || JSON.stringify(user)}</li>
-        ))}
-      </ul>
+      <h2 className="mb-4 text-warning">Users</h2>
+      <div className="card shadow-sm mb-4">
+        <div className="card-body">
+          <table className="table table-striped table-bordered">
+            <thead className="table-dark">
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              {users.length === 0 ? (
+                <tr><td colSpan="3" className="text-center">No users found.</td></tr>
+              ) : (
+                users.map((user, idx) => (
+                  <tr key={user.id || idx}>
+                    <td>{user.id || idx + 1}</td>
+                    <td>{user.name || '-'}</td>
+                    <td>{user.email || '-'}</td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

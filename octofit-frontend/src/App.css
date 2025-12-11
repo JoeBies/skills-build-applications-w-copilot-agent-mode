@@ -1,10 +1,19 @@
+
 .App {
   text-align: center;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.octofit-logo {
+  height: 48px;
+  margin-right: 16px;
+  vertical-align: middle;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -21,11 +30,75 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #f8f9fa;
 }
 
-.App-link {
-  color: #61dafb;
+.App-link, .navbar-brand, .nav-link {
+  color: #007bff !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.App-link:hover, .navbar-brand:hover, .nav-link:hover {
+  color: #0056b3 !important;
+}
+/* Table styles */
+table.table {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+thead.table-dark {
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  color: #fff;
+}
+tbody tr {
+  color: #333;
+}
+tbody tr:nth-child(even) {
+  background-color: #f2f6fc;
+}
+/* Button styles */
+.btn {
+  border-radius: 20px;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-success {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #fff;
+  border: none;
+}
+.btn-success:hover {
+  background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+  color: #fff;
+}
+/* Heading styles */
+h1, h2, h3, h4, h5 {
+  color: #007bff;
+  font-weight: 700;
+}
+.text-primary { color: #007bff !important; }
+.text-success { color: #28a745 !important; }
+.text-info { color: #17a2b8 !important; }
+.text-warning { color: #ffc107 !important; }
+.text-danger { color: #dc3545 !important; }
+/* Navigation styles */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+}
+.navbar-brand {
+  color: #fff !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-link {
+  color: #f8f9fa !important;
+  margin-right: 1rem;
+}
+.nav-link.active {
+  color: #ffc107 !important;
 }
 
 @keyframes App-logo-spin {
