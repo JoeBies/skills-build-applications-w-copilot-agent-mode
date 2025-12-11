@@ -16,6 +16,8 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+    os.system('rm -rf node_modules package-lock.json')
+    os.system('npm install')
  
 
 if __name__ == '__main__':
